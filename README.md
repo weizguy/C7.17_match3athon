@@ -15,6 +15,25 @@ Hackathon project involving the combination of different data sources into an ap
 - **Innovative / Transformative** : Did the project do something new and exciting?  Was it bold and tried to do things that haven't been done much.  Did it combine the data sources together in a way that was more useful than either source by itself
 - **Ease of Use / Understanding** : Was it easy to use the application / game, or if it was more complex, was the application or game able to provide you with tutorials or instructions that made understanding it a breeze.
 
+### Teams
+- Team 1:
+  - Miles
+  - Vernon
+  - Mike
+  - Sean G
+  - Mentor: Wade
+- Team 2: 
+  - Brian
+  - Patrick
+  - Cung
+  - Sloan
+  - Mentor: Kevin
+- Team 3:
+  - Jason
+  - Tammy
+  - Sean D
+  - Ryan Moy
+  - Mentor: Danh
 
 ### Deadline: 
 - 6:00PM Tuesday, December 13th, 2016
