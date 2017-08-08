@@ -1,4 +1,4 @@
-# C11_Hackathon 1
+# C7.17_Hackathon 1
 Teams will make a match 3 game similar to Bejeweled or Candy Crush
 
 ### Requirements
