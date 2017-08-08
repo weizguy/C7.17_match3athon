@@ -1,11 +1,19 @@
-# C11_Hackathon
-Hackathon project involving the combination of different data sources into an application or game
+# C11_Hackathon 1
+Teams will make a match 3 game similar to Bejeweled or Candy Crush
 
 ### Requirements
-- Combine at least 3 **external** resources via AJAX requests and present their information in an application
-- Must be documented loosely on JSDOC standards
+- game board dimensions must be at least 8 by 8 
+- game board must have at least 3 different pieces
+- game must have at least 1 human player
+- game must, when at least 3 in a row/column match (or sequence), remove or otherwise transform those 3 items
+- game must include 1 special piece that either is dropped randomly or is transformed from certain piece combinations
+- game must keep track of the player's current score
+- game must keep track of HIGH scores that persists across page reload
+- game must be losable in some way
 - Must be issue-managed via meistertask
-- Should encorporate <a href="https://www.google.com/design/spec/material-design/introduction.html" target="_blank">Google Material standards</a>
+  - must include daniel.paschal@learningfuze.com
+  - must be named according to the following: teamX_7_17_match3athon
+
 
 ### Judging Criteria
 - **Appeal** : is it visually appealing / well put together
@@ -17,24 +25,26 @@ Hackathon project involving the combination of different data sources into an ap
 
 ### Teams
 - Team 1:
-  - Miles
-  - Vernon
-  - Mike
-  - Sean G
-  - Mentor: Wade
+  - Cody
+  - Jen
+  - Jonathan
 - Team 2: 
-  - Brian
-  - Patrick
-  - Cung
-  - Sloan
-  - Mentor: Kevin
-- Team 3:
-  - Jason
-  - Tammy
-  - Sean D
-  - Ryan Moy
-  - Mentor: Danh
+  - Shane
+  - Chris
+  - Soyoung
+- Team 3: 
+  - Nico
+  - Hanlin
+  - Austin
+- Team 4: 
+  - Grayson
+  - Matt
+  - Vache
+- Team 5: 
+  - Soren
+  - Carlos
+  - Caleb
 
 ### Deadline: 
-- 6:00PM Tuesday, December 13th, 2016
+- 6:00PM Thursday, August 10th, 2017
 
