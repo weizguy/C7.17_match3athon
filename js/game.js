@@ -7,6 +7,14 @@ var column = 0;
 var score = 0;
 var need = 1000;
 var level = 0;
+var up = null;
+var down = null;
+var left = null;
+var right = null;
+var first = null;
+var second = null;
+var clickable = true;
+var temp;
 
 $(document).ready(function() {
     createBoard();
@@ -67,13 +75,15 @@ function resetScore(){
     $('#scoreText').text(score.toLocaleString());
 }
 
+// Create Board function
+var square = null;
 function createBoard() {
     var $gameGrid = $('#gameGrid');
     for (var i = 0; i < 8; i++) {
         var row = $('<div>').addClass('row'+i);
         $gameGrid.append(row);
         for (var j = 0; j < 9; j++) {
-            var square = $('<div>').addClass('gameSquare').data('column', j).data('row', i);
+            square = $('<div>').addClass('gameSquare').data('column', j).data('row', i);
             $('.row'+i).append(square);
         }
     }
@@ -89,18 +99,94 @@ function play() {
     $('#startScreen').hide();
 }
 
+// var current = null;
+// var pointer = null;
+// var alt = null;
+// var id = null;
+// function clicker() {
+//     pointer = $(this);
+//     alt = Number(pointer.context.attributes[1].value);
+//     current = imgChoice[alt].img;
+//     id = "#" + alt;
+//     console.log("ID: " + id);
+//     $(id).addClass("clicked");
+//     console.log("Current: " + current);
+//
+//     row = $(this).data('row') + 1;
+//     column = $(this).data('column') + 1;
+//     if(column > 1) {
+//         left = imgChoice[alt - 1].img;
+//         console.log("Left: " + left);
+//     }
+//     if(column < 9) {
+//         right = imgChoice[alt + 1].img;
+//         console.log("Right: " + right);
+//     }
+//     if(row > 1) {
+//         up = imgChoice[alt - 9].img;
+//         console.log("Up: " + up);
+//         // up = row - 1;
+//     }
+//     if(row < 8) {
+//         down = imgChoice[alt + 9].img;
+//         console.log("Down: " + down);
+//         // down = row + 1;
+//     }
+// img = $(this).context.style.backgroundImage;
+// score += 100;
+// $('#scoreText').text(score.toLocaleString());
+// if(score === need){
+//     level += 1;
+//     $('#levelText').text(level);
+//     scoreLevel();
+//     $('#needText').text(need.toLocaleString());
+// }
+// }
+
+
+
+var x = 0;
+var y = 0;
+var firstImage = null;
+var secondImage = null;
 function clicker() {
-    row = $(this).data('row') + 1;
-    column = $(this).data('column') + 1;
-    img = $(this).context.style.backgroundImage;
-    score += 100;
-    $('#scoreText').text(score.toLocaleString());
-    if(score === need){
-        level += 1;
-        $('#levelText').text(level);
-        scoreLevel();
-        $('#needText').text(need.toLocaleString());
-    }
+        if($(this).hasClass('clicked')){
+            return;
+        }
+        $(this).addClass('clicked');
+        if(first === null){
+            x = Number($(this).context.attributes[2].value);
+            first = $(this); //$("#" + $(this).context.attributes[1].value);
+            firstImage = first.context.attributes[1].value;
+        }else {
+            y = Number($(this).context.attributes[2].value);
+            second = $(this); //$("#" + $(this).context.attributes[1].value);
+            secondImage = second.context.attributes[1].value;
+            if((x === (y-1)) || (x === (y+1)) || (x === (y+9)) || (x === (y-9))) {
+                swapImg(first, firstImage, second, secondImage);
+            }else {
+                nullIt();
+            }
+        }
+}
+
+function swapImg(one, firstImg, two, secondImg){
+    one.removeClass(firstImg);
+    one.addClass(secondImg);
+    two.removeClass(secondImg);
+    two.addClass(firstImg);
+    one.attr("name", secondImg);
+    two.attr("name", firstImg);
+    nullIt();
+}
+
+function nullIt() {
+    first.removeClass("clicked");
+    second.removeClass("clicked");
+    firstImage = null;
+    secondImage = null;
+    first = null;
+    second = null;
 }
 
 // function to assign the card faces START
@@ -117,10 +203,15 @@ function shuffleChars(array) {
         array[index] = temp;
     }
     $('.gameSquare').each(function (val) {
-        $(this).css('background-image', 'url(' + imgChoice[val].img + ')');
+        // $(this).css('background-image', 'url(' + imgChoice[val].img + ')');
+        $(this).removeClass();
+        $(this).addClass("gameSquare");
+        $(this).addClass(imgChoice[val].name);
+        $(this).attr('name', imgChoice[val].name);
     });
     $('.gameSquare').each(function (index) {
         $(this).attr('alt', index);
+        $(this).attr('id', index);
     });
 }
 // ***********************************************************************************
@@ -134,11 +225,11 @@ var characters = [
     {   name: "Bart", img: "images/bart.jpg" },
     {   name: "Lisa", img: "images/lisa.png" },
     {   name: "Maggie", img: "images/maggie.png" },
-    {   name: "Santas Helper", img: "images/santashelper.png" },
+    {   name: "SantasHelper", img: "images/santashelper.png" },
     {   name: "Krusty", img: "images/krusty.jpg" },
     {   name: "Itchy", img: "images/itchy.png" },
     {   name: "Scratchy", img: "images/scratchy.jpg" },
-    {   name: "Chief Wiggums", img: "images/chief.jpg" },
+    {   name: "ChiefWiggums", img: "images/chief.jpg" },
     {   name: "Flanders", img: "images/flanders.png" },
     {   name: "Grandpa", img: "images/grandpa.png" }
 ];

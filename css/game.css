@@ -150,3 +150,51 @@ body {
 #play:hover {
     background-color: dodgerblue;
 }
+
+.ChiefWiggums {
+    background-image: url("../images/chief.jpg");
+}
+
+.SantasHelper {
+    background-image: url("../images/santashelper.png");
+}
+
+.Homer {
+    background-image: url("../images/homer.jpg");
+}
+
+.Marge {
+    background-image: url("../images/marge.png");
+}
+
+.Bart {
+    background-image: url("../images/bart.jpg");
+}
+
+.Lisa {
+    background-image: url("../images/lisa.png");
+}
+
+.Maggie {
+    background-image: url("../images/maggie.png");
+}
+
+.Krusty {
+    background-image: url("../images/krusty.jpg");
+}
+
+.Itchy {
+    background-image: url("../images/itchy.png");
+}
+
+.Scratchy {
+    background-image: url("../images/scratchy.jpg");
+}
+
+.Flanders {
+    background-image: url("../images/flanders.png");
+}
+
+.Grandpa {
+    background-image: url("../images/grandpa.png");
+}
