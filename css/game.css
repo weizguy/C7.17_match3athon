@@ -14,18 +14,16 @@ body {
     position: absolute;
     top: 50px;
     right: 180px;
-    border: 5px solid gold;
+    border: 10px solid gold;
     border-radius: 25px;
-    background-color: rgba(0, 0, 0, .5);
-    height: 200px;
-    width: 600px;
+    background-color: rgba(0, 0, 0, .9);
 }
 
 #gameArea {
     position: absolute;
     top: 50px;
     left: 180px;
-    border: 5px solid gold;
+    border: 10px solid gold;
     border-radius: 25px;
     background-color: rgba(0, 0, 0, .5);
 }
@@ -44,4 +42,111 @@ body {
 
 .gameSquare:hover {
     cursor: pointer;
+    border: 5px solid lightseagreen;
+}
+
+#level,
+#need,
+#score {
+    display: inline-block;
+    /*border: 1px solid cornsilk;*/
+    /*background-color: black;*/
+    /*border-radius: 25px;*/
+    height: 200px;
+    width: 200px;
+    margin: 5px;
+    text-align: center;
+}
+
+.title {
+    color: gold;
+    font-size: 40px;
+    padding: 20px;
+    font-family: 'Schoolbell', cursive;
+}
+
+#btn {
+    background-color: yellow;
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    right: 350px;
+    top: 320px;
+    color: black;
+    font-size: 40px;
+    border-radius: 15px;
+    border: 2px solid black;
+    text-align: center;
+    font-family: 'Schoolbell', cursive;
+    cursor: pointer;
+}
+
+#btn:hover {
+    border: 3px solid black;
+}
+
+#levelText,
+#needText,
+#scoreText {
+    height: 100px;
+    width: 190px;
+    margin: 5px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    font-family: 'Schoolbell', cursive;
+}
+
+#welcome {
+    top: 250px;
+    width: 700px;
+    height: 600px;
+    border: 10px solid gold;
+    border-radius: 25px;
+    margin: auto;
+    padding: 50px;
+    background-color: white;
+    background-image: url("../images/title.jpg");
+    background-repeat: no-repeat;
+}
+
+#screenTitle {
+    font-size: 40px;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    font-family: 'Schoolbell', cursive;
+    margin-bottom: 100px;
+}
+
+#startScreen {
+    padding: 150px;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,1);
+}
+
+#play {
+    background-color: yellow;
+    width: 200px;
+    height: 60px;
+    color: black;
+    font-size: 40px;
+    border-radius: 15px;
+    border: 2px solid black;
+    text-align: center;
+    font-family: 'Schoolbell', cursive;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 430px;
+}
+
+#play:hover {
+    background-color: dodgerblue;
 }
