@@ -12,7 +12,7 @@ body {
 
 #gameInfo {
     position: absolute;
-    top: 50px;
+    top: 20px;
     right: 180px;
     border: 10px solid gold;
     border-radius: 25px;
@@ -21,37 +21,19 @@ body {
 
 #gameArea {
     position: absolute;
-    top: 50px;
-    left: 180px;
+    top: 20px;
+    left: 200px;
     border: 10px solid gold;
     border-radius: 25px;
     background-color: rgba(0, 0, 0, .5);
-}
-
-.gameSquare {
-    display: inline-block;
-    margin: 2px;
-    border: 1px solid cornsilk;
-    border-radius: 25px;
-    background-color: rgba(0, 0, 0, .7);
-    z-index:3;
-    height: 70px;
-    width: 70px;
-    background-size: cover;
-}
-
-.gameSquare:hover {
-    cursor: pointer;
-    border: 5px solid dodgerblue;
+    width: 690px;
+    height: 690px;
 }
 
 #level,
 #need,
 #score {
     display: inline-block;
-    /*border: 1px solid cornsilk;*/
-    /*background-color: black;*/
-    /*border-radius: 25px;*/
     height: 200px;
     width: 200px;
     margin: 5px;
@@ -121,8 +103,8 @@ body {
 
 #welcome {
     top: 250px;
-    width: 700px;
-    height: 600px;
+    width: 595px;
+    height: 500px;
     border: 10px solid gold;
     border-radius: 25px;
     margin: auto;
@@ -142,7 +124,8 @@ body {
 }
 
 #startScreen {
-    padding: 150px;
+    padding: 0px;
+    padding-top: 120px;
     z-index: 100;
     position: absolute;
     left: 0;
@@ -171,50 +154,91 @@ body {
     background-color: dodgerblue;
 }
 
-.ChiefWiggums {
-    background-image: url("../images/chief.jpg");
+.gameSquare:hover {
+    background-color: dodgerblue;
 }
 
-.SantasHelper {
-    background-image: url("../images/santashelper.png");
+.gameSquare > img {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    margin: 3px;
+    background-size: cover;
 }
 
-.Homer {
-    background-image: url("../images/homer.jpg");
+.gameSquare {
+    display: inline-block;
+    width: 86px;
+    height: 86px;
+    border-radius: 15px;
 }
 
-.Marge {
-    background-image: url("../images/marge.png");
+.readyToDestroy {
+    animation: spin2 .5s;
+
 }
 
-.Bart {
-    background-image: url("../images/bart.jpg");
+@keyframes dropAnimationTop {
+    from {transform: translateY(-1000%)}
+    to {transform: translateY(0%)}
 }
 
-.Lisa {
-    background-image: url("../images/lisa.png");
+@keyframes dropAnimation1 {
+    from {transform: translateY(-125%)}
+    to {transform: translateY(0%)}
 }
 
-.Maggie {
-    background-image: url("../images/maggie.png");
+@keyframes dropAnimation2 {
+    from {transform: translateY(-250%)}
+    to {transform: translateY(0%)}
 }
 
-.Krusty {
-    background-image: url("../images/krusty.jpg");
+@keyframes dropAnimation3 {
+    from {transform: translateY(-375%)}
+    to {transform: translateY(0%)}
 }
 
-.Itchy {
-    background-image: url("../images/itchy.png");
+@keyframes dropAnimation4 {
+    from {transform: translateY(-500%)}
+    to {transform: translateY(0%)}
 }
 
-.Scratchy {
-    background-image: url("../images/scratchy.jpg");
+@keyframes dropAnimation5 {
+    from {transform: translateY(-625%)}
+    to {transform: translateY(0%)}
 }
 
-.Flanders {
-    background-image: url("../images/flanders.png");
+@keyframes dropAnimation6 {
+    from {transform: translateY(-750%)}
+    to {transform: translateY(0%)}
 }
 
-.Grandpa {
-    background-image: url("../images/grandpa.png");
+@keyframes dropAnimation7 {
+    from {transform: translateY(-875%)}
+    to {transform: translateY(0%)}
+}
+
+@keyframes leftToRightSwap {
+    from {transform: translateX(-100%)}
+    to {transform: translateX(0%)}
+}
+
+@keyframes rightToLeftSwap {
+    from {transform: translateX(100%)}
+    to {transform: translateX(0%)}
+}
+
+@keyframes topToBottomSwap {
+    from {transform: translateY(-125%)}
+    to {transform: translateY(0%)}
+}
+
+@keyframes bottomToTopSwap {
+    from {transform: translateY(125%)}
+    to {transform: translateY(0%)}
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg)}
+    to {  -webkit-transform: rotate(360deg) scale(.1);}
 }
